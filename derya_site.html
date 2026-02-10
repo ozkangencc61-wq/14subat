@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Derya 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Poppins;background:linear-gradient(120deg,#ffd1e6,#fff0f7,#fff);text-align:center;overflow:hidden}
+h1{font-family:'Great Vibes';font-size:70px;color:#ff3f8e;margin-top:60px}
+.btn{padding:18px 35px;font-size:22px;border:none;border-radius:40px;background:#ff3f8e;color:white;cursor:pointer}
+#content{display:none;animation:fade 2s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.card{max-width:900px;margin:30px auto;background:white;padding:35px;border-radius:30px;box-shadow:0 15px 35px rgba(0,0,0,.1);line-height:1.8}
+.poem{color:#ff3f8e;font-style:italic;font-size:24px;margin-top:30px}
+.heart{position:fixed;top:-10px;color:#ff3f8e;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh)}}
+</style>
+</head>
+<body>
+<h1>Mesajın Var 💌</h1>
+<button class="btn" onclick="openMsg()">Tıkla</button>
+<div id="content">
+<div class="card">Derya şuanda sevgili olmasak ta bu 14 şubatta senin boş geçmeni istemiyorum artık hayatında benim olduğumu düşünüyorum artık benim bir parçam olduğunu düşünüyorum seninde öyle hissetiğini umuyorum bazen seninle konuşucak bir şey bulamıyorum ama senınle konuşmasam bile hayatımda olmandan keyif alıyorum ve bundan mutlu oluyorum şuan saat sabahın 5.30 u ve senin için böyle birşey yapasım geldi tarih iste 11.02.2026 seni sevdiğimi söylemiştim ve bunu gene söylemek istiyorum seni gene çoook seviyorum sen benim hayatımın bir anlam parçası olucaksın bana şuan belkide yakın olmasanda utangaçlığı atıp bana kendini gösterceğine inanıyorum ve bu ilişkimizin ilerleyeceğini düşünüyorum 14 şubat sevgililer günümüz kutlu olsunn sana kendim hediye yapacaktım ama kızdığın için yapamadım diye biliriz biraz yoksa aklımda çok güzel hediyeler vardı bunuda yazıyorum ama veda notu gibi oldu duygularımı sana karşılıklıda dökmek isterim ama burdan yaparsam senin için daha iyi olcağını düşündüm hemde 14 şubat için ufak bir not olur tatlı olur diye düşündüm inşallah senı bunla okutup canını sıkmamışımdır seninde ilkin olacağım için şanslı hissediyorum kendimi seni bu ilişki olursa pişman etmeyeceğim aşşağıyada ufak bir şiir bırakmak istiyorum :)</div>
+<div class="poem">Nefes almak için pencereyi <br> değil de <br> Fotoğraflarını açtığım zaman <br> anladım <br> Sana yenildiğimi</div>
+</div>
+<script>
+function openMsg(){document.querySelector('.btn').style.display='none';document.getElementById('content').style.display='block';}
+function heart(){let h=document.createElement('div');h.className='heart';h.innerHTML='❤';h.style.left=Math.random()*100+'vw';h.style.fontSize=(Math.random()*25+15)+'px';h.style.animationDuration=(Math.random()*3+3)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),6000);}
+setInterval(heart,200);
+</script>
+</body>
+</html>
